@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Commands.Domain.Base", "Microservices.Commands.Domain.Base\Microservices.Commands.Domain.Base.csproj", "{FFDAA8E6-EA86-4607-8102-7D689AAD7179}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Commands.Domain.Base.Tests", "Microservices.Commands.Domain.Base.Tests\Microservices.Commands.Domain.Base.Tests.csproj", "{BCD61ACF-2BD4-487E-98BD-3CD72BF81B4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FFDAA8E6-EA86-4607-8102-7D689AAD7179}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFDAA8E6-EA86-4607-8102-7D689AAD7179}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFDAA8E6-EA86-4607-8102-7D689AAD7179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD61ACF-2BD4-487E-98BD-3CD72BF81B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD61ACF-2BD4-487E-98BD-3CD72BF81B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD61ACF-2BD4-487E-98BD-3CD72BF81B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD61ACF-2BD4-487E-98BD-3CD72BF81B4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,37 +1,26 @@
-﻿using Microservices.Commands.Domain.Base.Validation;
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microservices.Commands.Domain.Base.Notifications;
+using System.Linq;
 
 namespace Microservices.Commands.Domain.Base.Entities
 {
-    public class Entity : BaseValidation, IBaseValidation
+    public abstract class Entity<TId>
+        where TId : struct
     {
-        protected Entity(Guid id)
+        protected Entity(TId id)
         {
             SetId(id);
         }
 
         protected Entity()
         {
-            SetId(Guid.NewGuid());
         }
 
-        [Key]
-        public Guid Id { get; set; }
+        public TId Id { get; private set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long Indice { get; set; }
+        public INotification Notification { get; }
 
-        private void SetId(Guid id)
-        {
-            if (id == default)
-            {
-                AddError($"Não é possível inserir no Id o valor: {id}");
-                return;
-            }
+        public virtual bool IsValid() => Notification?.Errors?.Any() ?? true;
 
-            Id = id;
-        }
+        protected abstract void SetId(TId id);
     }
 }
